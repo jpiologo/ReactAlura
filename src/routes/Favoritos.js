@@ -1,7 +1,6 @@
-import Header from '../components/Header';
+import { useEffect , useState } from 'react';
 import styled from 'styled-components';
-import Pesquisa from '../components/Pesquisa';
-import UltimosLancamentos from '../components/UltimosLancamentos';
+import { getFavoritos } from '../services/favoritos';
 
 const AppContainer = styled.div`
   width: 100vw;
@@ -14,9 +13,22 @@ const AppContainer = styled.div`
 `
 
 function Favoritos() {
+  const [favoritos, setFavoritos] = useState([])
+
+  async function fetchFavoritos() {
+    const favoritosDaApi = await getFavoritos()
+    setFavoritos(favoritosDaApi)
+  }
+
+  useEffect(() => {
+    fetchFavoritos();
+  }, []);
+
   return (
     <AppContainer>
-      <Pesquisa/>
+      {favoritos.map( favorito => (
+        <p>{favorito.nome}</p>
+      ))}
     </AppContainer>
   ); 
 }
