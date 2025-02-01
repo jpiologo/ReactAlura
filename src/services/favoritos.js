@@ -8,8 +8,19 @@ async function getFavoritos () {
     return response.data
 }
 
+async function postFavorito (id) {
+    await favoritosAPI.post(`/${id}`)
+}
+
+async function deleteFavorito (id) {
+    await favoritosAPI.delete(`/${id}`)
+}
+
 export {
-    getFavoritos
+    getFavoritos,
+    postFavorito,
+    deleteFavorito
 }
 
 //Sobre async e await: https://www.alura.com.br/artigos/async-await-no-javascript-o-que-e-e-quando-usar
+//Sobre o banco de dados MongoDB: https://www.alura.com.br/artigos/mongodb-o-banco-baseado-em-documentos
