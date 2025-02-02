@@ -57,6 +57,7 @@ function Favoritos() {
 
   async function deletarFavorito(id) {
     await deleteFavorito(id)
+    await fetchFavoritos()
     alert(`Livro de ID ${id} removido!`)
   }
 
