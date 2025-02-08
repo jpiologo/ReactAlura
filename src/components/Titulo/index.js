@@ -8,4 +8,5 @@ export const Titulo = styled.h2`
     font-size: ${props => props.tamFonte || '16px'};
     text-align: ${props => props.alinhamento || 'center'};
     margin: 0;
+    font-family: "Nunito", serif;
 `

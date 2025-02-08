@@ -5,6 +5,7 @@ const Opcoes = styled.ul`
   display: flex;
 `
 const Opcao = styled.li`
+  font-family: "Nunito", serif;
   font-size: 16px;
   display: flex;
   justify-content: center;

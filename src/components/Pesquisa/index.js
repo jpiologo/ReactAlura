@@ -19,12 +19,14 @@ const Titulo = styled.h2`
     font-size: 36px;
     text-align: center;
     width: 100%;
+    font-family: "Nunito", serif;
 `;
 
 const Subtitulo = styled.h4`
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     margin-bottom: 40px;
+    font-family: "Nunito", serif;
 `;
 
 const ResultadoContainer = styled.div`
@@ -39,6 +41,7 @@ const ResultadoContainer = styled.div`
     z-index: 10;
     left: 50%;
     transform: translateX(-50%);
+    font-family: "Nunito", serif;
 `;
 
 const Resultado = styled.div`
@@ -48,6 +51,7 @@ const Resultado = styled.div`
     padding: 10px;
     cursor: pointer;
     border-bottom: 1px solid #ddd;
+    font-family: "Nunito", serif;
 
     &:hover {
         background: #f0f0f0;
